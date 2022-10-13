@@ -1,2 +1,2 @@
 # NIET CSE(DATA SCIENCE) Batch 2024 [Codetantra](https://niet.codetantra.com/secure/home.jsp) lab programs ...
-- [Design and Analysis of Algorithms (sem 5)](https://github.com/tarique4hussain/niet-codetantra-2022/tree/main/Design and Analysis of Algorithms)
+- [Design and Analysis of Algorithms (sem 5)](https://github.com/tarique4hussain/niet-codetantra-2022/tree/main/Design%and%Analysis%of%Algorithms)
