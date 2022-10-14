@@ -1,13 +1,25 @@
 import sys
 
-r1 = float(sys.argv[1])
-r2 = float(sys.argv[2])
-r3 = float(sys.argv[3])
+s = sys.argv[1]
 
-def combinedResistanceParallel(r1, r2, r3):
-	try:
-		return round((r1*r2*r3) / (r1*r2 + r2*r3 + r3*r1), 6)
-	except:
-		return -1
+def isPrimeLengthPalindrome(s):
 
-print("%1.6e" % combinedResistanceParallel(r1, r2, r3))
+	n=len(s)
+	rev=""
+	flag=0
+	if n>1:
+		for i in range(2,n):
+			if n%i==0:
+				flag=1
+				break
+	if flag==1:
+		return False
+	else:
+		for i in s:
+			rev=i+rev
+		if rev==s and flag==0:
+			return True
+		else:
+			return False
+
+print("true" if isPrimeLengthPalindrome(s) else "false");
