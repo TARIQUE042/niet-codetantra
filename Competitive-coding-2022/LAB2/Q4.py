@@ -1,15 +1,17 @@
 import sys
 
-a = int(sys.argv[1])
-b = int(sys.argv[2])
+s = sys.argv[1]
+keys=[chr(x) for x in range(97,123)]
+values=[x for x in range(1,27)]
+myDict={k:v for (k,v) in zip(keys, values)}
 
-def getProductSign(a, b):
-	if a>0 and b>0: return 'positive'
-	if a<=0<=b:
-		return 'zero'
-	negatives = a-b+1
-	if negatives%2==0:
-		return'positive'
-	return 'negative'
+def isSuper(s):
+	# Write code here
+	Is=[x for x in s]
+	se=set(Is)
+	for i in s:
+		if s.count(i) != myDict[i]:
+			return False
+	return True
 
-print(getProductSign(a, b))
+print("true" if isSuper(s) else "false");
