@@ -1,10 +1,17 @@
 import sys
 
-N = int(sys.argv[1])
-L = int(sys.argv[2])
-R = int(sys.argv[3])
+S = sys.argv[1]
 
-def sumBetween(N, L, R):
-	arr = [i for i in range(0, N+1, 2)] + [i for i in range(1, N+1, 2)]
-	return sum(arr[L:R+1])
-print(sumBetween(N, L, R))
+def consecutiveString(S):
+	ans = ''
+	stack = S[0]
+	for i in range(len(S) -1):
+		if S[i+1]!=stack[-1]:
+			ans += stack
+			stack = S[i+1]
+		else:
+			stack += S[i+1]
+			if len(stack) > 2:
+				stack = stack[:2]
+	return ans+stack
+print(consecutiveString(S))
